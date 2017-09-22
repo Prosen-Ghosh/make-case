@@ -18,15 +18,18 @@ A JavaScript Package For Convert a string to Different Case Styles Edit
 ## Features
 
 
-## Install
+## `npm` Install
 
 `npm install --save make-case`
 
+## Browser Install
 
-## Scripts
+#### Production Use
+`https://cdn.rawgit.com/Prosen-Ghosh/make-case/4f189deb/make-case.js`
 
- - **npm run test** : `mocha`
- - **npm run readme** : `node ./node_modules/.bin/node-readme`
+#### Development Use
+
+`https://rawgit.com/Prosen-Ghosh/make-case/master/make-case.js`
 
 ## Development Dependencies
 
@@ -36,6 +39,43 @@ Package | Version | Dev
 [mocha](https://www.npmjs.com/package/mocha) | ^3.5.3 | ✔
 [node-readme](https://www.npmjs.com/package/node-readme) | ^0.1.9 | ✔
 
+## API
+
+**Available methods**
+- [`toCamelCase`](https://www.npmjs.com/package/make-case#toCamelCase)
+
+
+# Usage
+
+#### `toCamelCase`
+
+```javascript
+const makeCase = require('./make-case');
+
+makeCase.toCamelCase("first-name")
+//=> "firstName"
+
+makeCase.toCamelCase("first name");
+//=> "firstName"
+
+makeCase.toCamelCase("first/name")
+//=> "firstName"
+
+makeCase.toCamelCase("first.name")
+//=> "firstName"
+
+makeCase.toCamelCase("first~name")
+//=> "firstName"
+
+makeCase.toCamelCase("first_name")
+//=> "firstName"
+
+makeCase.toCamelCase("FirsT-NAme")
+//=> "firstName"
+
+makeCase.toCamelCase("First-Name")
+//=> "firstName"
+```
 
 ## Author
 
@@ -43,4 +83,4 @@ Prosen Ghosh <prosenghosh25@gmail.com>
 
 ## License
 
- - **MIT** : http://opensource.org/licenses/MIT
+ - **MIT**

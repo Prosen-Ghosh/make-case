@@ -1,14 +1,12 @@
 var makeCase = (function(){
     'use strict';
-    function camCase(){
-        console.log("camCase")
-    }
-	function jamCase(){
-        	console.log("JamCase")
+    var toCamelCase = function(str){
+        return str.toLowerCase().replace(/[-_ ./~ ][a-z]/g,function(v){
+            return v.slice(1).toUpperCase();
+        });
     }
     return {
-		camCase,
-		jamCase
+		toCamelCase
 	};
 })();
 

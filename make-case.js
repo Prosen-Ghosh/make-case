@@ -22,9 +22,23 @@ var makeCase = (function(){
             return '.' + v.slice(1);
         });
     }
+
+    var toConstantCase = function(str){
+        if(str === undefined){
+            throw "toConstantCase function will take an string argument";
+        }
+        if(typeof str === 'string' && str.length === 0){
+            throw "string argument can't be empty.";
+        }
+        return str.toUpperCase().replace(/[-_ /~ .][A-Z 0-9]/g,function(v){
+            return '_' + v.slice(1);
+        });
+    }
+    
     return {
         toCamelCase,
-        toDotCase
+        toDotCase,
+        toConstantCase
 	};
 })();
 

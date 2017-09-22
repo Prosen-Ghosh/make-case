@@ -44,14 +44,15 @@ Package | Version | Dev
 **Available methods**
 - [`toCamelCase`](https://www.npmjs.com/package/make-case#tocamelcase)
 - [`toDotCase`](https://www.npmjs.com/package/make-case#todotcase)
+- [`toConstantCase`](https://www.npmjs.com/package/make-case#toconstantcase)
 
 
 # Usage
 
-#### [`toCamelCase`](https://www.npmjs.com/package/make-case#tocamelcase)
+#### [`toCamelCase(string)`](https://www.npmjs.com/package/make-case#tocamelcase)
 
 ```javascript
-const makeCase = require('./make-case');
+const makeCase = require('make-case');
 
 makeCase.toCamelCase("first-name")
 //=> "firstName"
@@ -78,35 +79,62 @@ makeCase.toCamelCase("First-Name")
 //=> "firstName"
 ```
 
-#### [`toDotCase`](https://www.npmjs.com/package/make-case#todotcase)
+#### [`toDotCase(string)`](https://www.npmjs.com/package/make-case#todotcase)
 
 ```javascript
-const makeCase = require('./make-case');
+const makeCase = require('make-case');
 
-toDotCase("something_js")
+makeCase.toDotCase("something_js")
 //;=> "something.js"
 
-toDotCase("something~js")
+makeCase.toDotCase("something~js")
 //=> "something.js"
 
-toDotCase("something-js")
+makeCase.toDotCase("something-js")
 //=> "something.js"
 
-toDotCase("something[js")
+makeCase.toDotCase("something[js")
 //=> "something.js"
 
-toDotCase("something/js")
+makeCase.toDotCase("something/js")
 //=> "something.js"
 
-toDotCase("something]js")
+makeCase.toDotCase("something]js")
 //=> "something.js"
 
-toDotCase("something js")
+makeCase.toDotCase("something js")
 //=> "something.js"
 
-toDotCase("something JS")
+makeCase.toDotCase("something JS")
 //=> "something.js"
 
+```
+
+#### [`toConstantCase(string)`](https://www.npmjs.com/package/make-case#toconstantcase)
+
+```javascript
+const makeCase = require('make-case');
+
+makeCase.toConstantCase('api~key');
+//=> API_KEY
+
+makeCase.toConstantCase('api-key');
+//=> API_KEY
+
+makeCase.toConstantCase('api key');
+//=> API_KEY
+
+makeCase.toConstantCase('api 1key');
+//=> API_1KEY
+
+makeCase.toConstantCase('api/key');
+//=> API_KEY
+
+makeCase.toConstantCase('api_key');
+//=> API_KEY
+
+makeCase.toConstantCase('Api Key');
+//=> API_KEY
 ```
 ## Author
 

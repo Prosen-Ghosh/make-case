@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/make-case.svg) ![license](https://img.shields.io/npm/l/make-case.svg) ![github-issues](https://img.shields.io/github/issues/Prosen-Ghosh/make-case.svg)  ![Circle CI build status](https://circleci.com/gh/Prosen-Ghosh/make-case.svg?style=svg)
 
-A JavaScript Package For Convert a string to Different Case Styles Edit
+A JavaScript Package For Convert a string to Different Case Style
 
 ![nodei.co](https://nodei.co/npm/make-case.png?downloads=true&downloadRank=true&stars=true)
 
@@ -85,18 +85,25 @@ const makeCase = require('./make-case');
 
 toDotCase("something_js")
 //;=> "something.js"
+
 toDotCase("something~js")
 //=> "something.js"
+
 toDotCase("something-js")
 //=> "something.js"
+
 toDotCase("something[js")
 //=> "something.js"
+
 toDotCase("something/js")
 //=> "something.js"
+
 toDotCase("something]js")
 //=> "something.js"
+
 toDotCase("something js")
 //=> "something.js"
+
 toDotCase("something JS")
 //=> "something.js"
 

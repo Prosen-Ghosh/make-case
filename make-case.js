@@ -13,7 +13,7 @@ var makeCase = (function(){
     }
     var toDotCase = function(str){
         if(str === undefined){
-            throw "toCamelCase function will take an string argument";
+            throw "toDotCase function will take an string argument";
         }
         if(typeof str === 'string' && str.length === 0){
             throw "string argument can't be empty.";

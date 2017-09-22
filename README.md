@@ -43,6 +43,7 @@ Package | Version | Dev
 
 **Available methods**
 - [`toCamelCase`](https://www.npmjs.com/package/make-case#toCamelCase)
+- [`toDotCase`](https://www.npmjs.com/package/make-case#toDotCase)
 
 
 # Usage
@@ -77,6 +78,29 @@ makeCase.toCamelCase("First-Name")
 //=> "firstName"
 ```
 
+#### `toDotCase`
+
+```javascript
+const makeCase = require('./make-case');
+
+toDotCase("something_js")
+//;=> "something.js"
+toDotCase("something~js")
+//=> "something.js"
+toDotCase("something-js")
+//=> "something.js"
+toDotCase("something[js")
+//=> "something.js"
+toDotCase("something/js")
+//=> "something.js"
+toDotCase("something]js")
+//=> "something.js"
+toDotCase("something js")
+//=> "something.js"
+toDotCase("something JS")
+//=> "something.js"
+
+```
 ## Author
 
 Prosen Ghosh <prosenghosh25@gmail.com>

@@ -1,6 +1,6 @@
 {
   "name": "make-case",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A JavaScript Package For Convert a string to Different Case Styles Edit",
   "main": "make-case.js",
   "scripts": {
@@ -12,8 +12,7 @@
     "url": "git+https://github.com/Prosen-Ghosh/make-case.git"
   },
   "keywords": [
-    "Camel",
-    "Case",
+    "camelCase",
     "Case"
   ],
   "author": "Prosen Ghosh <prosenghosh25@gmail.com>",

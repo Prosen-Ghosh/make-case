@@ -1,6 +1,6 @@
 {
   "name": "make-case",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A JavaScript Package For Convert a string to Different Case Styles Edit",
   "main": "make-case.js",
   "scripts": {

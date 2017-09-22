@@ -42,13 +42,13 @@ Package | Version | Dev
 ## API
 
 **Available methods**
-- [`toCamelCase`](https://www.npmjs.com/package/make-case#toCamelCase)
-- [`toDotCase`](https://www.npmjs.com/package/make-case#toDotCase)
+- [`toCamelCase`](https://www.npmjs.com/package/make-case#tocamelcase)
+- [`toDotCase`](https://www.npmjs.com/package/make-case#todotcase)
 
 
 # Usage
 
-#### `toCamelCase`
+#### [`toCamelCase`](https://www.npmjs.com/package/make-case#tocamelcase)
 
 ```javascript
 const makeCase = require('./make-case');
@@ -78,7 +78,7 @@ makeCase.toCamelCase("First-Name")
 //=> "firstName"
 ```
 
-#### `toDotCase`
+#### [`toDotCase`](https://www.npmjs.com/package/make-case#todotcase)
 
 ```javascript
 const makeCase = require('./make-case');

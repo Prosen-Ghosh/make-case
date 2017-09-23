@@ -30,15 +30,42 @@ var makeCase = (function(){
         if(typeof str === 'string' && str.length === 0){
             throw "string argument can't be empty.";
         }
-        return str.toUpperCase().replace(/[-_ /~ .][A-Z 0-9]/g,function(v){
+        return str.toUpperCase().replace(/[-_ /~ .][A-Z0-9]/g,function(v){
             return '_' + v.slice(1);
         });
     }
     
+    var toDashCase = function(str){
+        if(str === undefined){
+            throw "toConstantCase function will take an string argument";
+        }
+        if(typeof str === 'string' && str.length === 0){
+            throw "string argument can't be empty.";
+        }
+        return str.replace(/[-_ /~ . ][A-z0-9]/g,function(v){
+            return '-' + v.slice(1);
+        }).toLowerCase();
+    }
+
+    var toSnakeCase = function(str){
+        if(str === undefined){
+            throw "toConstantCase function will take an string argument";
+        }
+        if(typeof str === 'string' && str.length === 0){
+            throw "string argument can't be empty.";
+        }
+        return str.replace(/[A-Z]/,function(v){
+			return ' ' + v.toLowerCase() 
+		}).replace(/[-_ /~ . ][A-z0-9]/g,function(v){
+            return '_' + v.slice(1);
+        }).toLowerCase();
+    }
     return {
         toCamelCase,
         toDotCase,
-        toConstantCase
+        toConstantCase,
+        toDashCase,
+        toSnakeCase
 	};
 })();
 

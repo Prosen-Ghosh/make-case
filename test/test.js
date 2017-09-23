@@ -3,7 +3,7 @@ const assert = require('chai').assert,
 
 describe('Camel Case Test',function(){
     it('Function Should Return A String.',function(){
-        assert.typeOf(typeof makeCase.toCamelCase('first name'),'string');
+        assert.typeOf(makeCase.toCamelCase('first name'),'string');
     });
 
     it('Returned String Should Be A Camle Case String',function(){
@@ -20,7 +20,7 @@ describe('Camel Case Test',function(){
 
 describe('Dot Case Test',function(){
     it('Function Should Return A String.',function(){
-        assert.typeOf(typeof makeCase.toCamelCase('first name'),'string');
+        assert.typeOf(makeCase.toDotCase('first name'),'string');
     });
 
     it('Returned String Should Be A Dot Case String',function(){
@@ -37,7 +37,7 @@ describe('Dot Case Test',function(){
 
 describe('Constant Case Test',function(){
     it('Function Should Return A String.',function(){
-        assert.typeOf(typeof makeCase.toCamelCase('api key'),'string');
+        assert.typeOf(makeCase.toConstantCase('api key'),'string');
     });
 
     it('Returned String Should Be A Constant Case String',function(){
@@ -49,5 +49,34 @@ describe('Constant Case Test',function(){
         assert.equal(makeCase.toConstantCase('api~key'),'API_KEY');
         assert.equal(makeCase.toConstantCase('api/key'),'API_KEY');
         assert.equal(makeCase.toConstantCase('Api keY'),'API_KEY');
+    });
+});
+
+describe('Dash Case Test',function(){
+    it('Function Should Return A String.',function(){
+        assert.typeOf(makeCase.toDashCase('first name'),'string');
+    });
+
+    it('Returned String Should Be A Dash Case String',function(){
+        assert.equal(makeCase.toDashCase('first 1 name'),'first-1-name');
+        assert.equal(makeCase.toDashCase('first_name'),'first-name');
+        assert.equal(makeCase.toDashCase('first~name'),'first-name');
+        assert.equal(makeCase.toDashCase('First Name'),'first-name');
+        assert.equal(makeCase.toDashCase('first-name'),'first-name');
+    });
+});
+
+describe('Snake Case Test',function(){
+    it('Function Should Return A String.',function(){
+        assert.typeOf(makeCase.toSnakeCase('first name'),'string');
+    });
+
+    it('Returned String Should Be A Snake Case String',function(){
+        assert.equal(makeCase.toSnakeCase('first 1 name'),'first_1_name');
+        assert.equal(makeCase.toSnakeCase('first-name'),'first_name');
+        assert.equal(makeCase.toSnakeCase('first~name'),'first_name');
+        assert.equal(makeCase.toSnakeCase('first name'),'first_name');
+        assert.equal(makeCase.toSnakeCase('first.name'),'first_name');
+        assert.equal(makeCase.toSnakeCase('firstName'),'first_name');
     });
 });

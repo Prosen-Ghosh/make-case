@@ -24,12 +24,16 @@ A JavaScript Package For Convert a string to Different Case Style
 
 ## Browser Install
 
-#### Production Use
-`https://cdn.rawgit.com/Prosen-Ghosh/make-case/4f189deb/make-case.js`
+#### Production Script tag
+```javascript
+<script src="https://cdn.rawgit.com/Prosen-Ghosh/make-case/4f189deb/make-case.js"></script>
+```
 
-#### Development Use
+#### Development Script tag
 
-`https://rawgit.com/Prosen-Ghosh/make-case/master/make-case.js`
+```javascript
+<script src="https://rawgit.com/Prosen-Ghosh/make-case/master/make-case.js"></script>
+```
 
 ## Development Dependencies
 
@@ -42,9 +46,11 @@ Package | Version | Dev
 ## API
 
 **Available methods**
-- [`toCamelCase`](https://www.npmjs.com/package/make-case#tocamelcase)
-- [`toDotCase`](https://www.npmjs.com/package/make-case#todotcase)
-- [`toConstantCase`](https://www.npmjs.com/package/make-case#toconstantcase)
+- [`toCamelCase(string)`](https://www.npmjs.com/package/make-case#tocamelcase)
+- [`toDotCase(string)`](https://www.npmjs.com/package/make-case#todotcase)
+- [`toConstantCase(string)`](https://www.npmjs.com/package/make-case#toconstantcase)
+- [`toDashCase(string)`](https://www.npmjs.com/package/make-case#todashcase)
+- [`toSnakeCase(string)`](https://www.npmjs.com/package/make-case#tosnakecase)
 
 
 # Usage
@@ -136,6 +142,57 @@ makeCase.toConstantCase('api_key');
 makeCase.toConstantCase('Api Key');
 //=> API_KEY
 ```
+
+#### [`toDashCase(string)`](https://www.npmjs.com/package/make-case)
+```javascript
+const makeCase = require('make-case');
+
+makeCase.toDashCase("first name 1");
+//=> "first-name-1"
+
+makeCase.toDashCase("first Name");
+//=> "first-name"
+
+makeCase.toDashCase("First Name");
+//=> "first-name"
+
+makeCase.toDashCase("First~Name");
+//=> "first-name"
+
+makeCase.toDashCase("First_Name");
+//=> "first-name"
+
+makeCase.toDashCase("First/Name");
+//=> "first-name"
+
+makeCase.toDashCase("First-Name");
+//=> "first-name"
+```
+
+#### [`toSnakeCase(string)`](https://www.npmjs.com/package/make-case#tosnakecase)
+
+```javascript
+const makeCase = require('make-case');
+
+makeCase.toSnakeCase("first name 1");
+//=> "first_name_1"
+
+makeCase.toSnakeCase("first name");
+//=> "first_name"
+
+makeCase.toSnakeCase("firstName");
+//=> "first_name"
+
+makeCase.toSnakeCase("first~name");
+//=> "first_name"
+
+makeCase.toSnakeCase("first.name");
+//=> "first_name"
+
+makeCase.toSnakeCase("first-name");
+//=> "first_name"
+```
+
 ## Author
 
 Prosen Ghosh <prosenghosh25@gmail.com>

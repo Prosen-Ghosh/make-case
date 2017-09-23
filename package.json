@@ -1,6 +1,6 @@
 {
   "name": "make-case",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A JavaScript Package For Convert a string to Different Case Styles Edit",
   "main": "make-case.js",
   "scripts": {
@@ -13,7 +13,15 @@
   },
   "keywords": [
     "camelCase",
-    "Case"
+    "Case",
+    "ConstantCase",
+    "kebab-case",
+    "dash-case",
+    "dashify",    
+    "snake_case",
+    "underscore_case",
+    "space separated string",
+    "dash separated string"
   ],
   "author": "Prosen Ghosh <prosenghosh25@gmail.com>",
   "license": "MIT",
